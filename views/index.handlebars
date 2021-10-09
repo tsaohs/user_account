@@ -1,0 +1,17 @@
+<div class="container mb-2" style="max-width: 500px">
+    <h3>Account Login</h3>
+    <form class="mt-5" action="/login" method="POST">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+        {{#if noUser}}<p class="my-2" style="color: red;">You haven't registered yet!</p> {{/if}}
+        {{#if invalidPW}}<p class="my-2" style="color: red;">Invalid password!</p>{{/if}}
+    </form>
+</div>
